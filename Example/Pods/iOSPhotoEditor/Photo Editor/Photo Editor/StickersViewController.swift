@@ -15,9 +15,9 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     
     var collectioView: UICollectionView!
-    var emojisCollectioView: UICollectionView!
+    // var emojisCollectioView: UICollectionView!
     
-    var emojisDelegate: EmojisCollectionViewDelegate!
+    // var emojisDelegate: EmojisCollectionViewDelegate!
     
     var stickers : [UIImage] = []
     var stickersViewControllerDelegate : StickersViewControllerDelegate?
@@ -72,26 +72,26 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         
         //-----------------------------------
         
-        let emojisFrame = CGRect(x: scrollView.frame.size.width,
-                                 y: 0,
-                                 width: UIScreen.main.bounds.width,
-                                 height: view.frame.height - 40)
+        // let emojisFrame = CGRect(x: scrollView.frame.size.width,
+        //                          y: 0,
+        //                          width: UIScreen.main.bounds.width,
+        //                          height: view.frame.height - 40)
         
-        let emojislayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        emojislayout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        emojislayout.itemSize = CGSize(width: 70, height: 70)
+        // let emojislayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        // emojislayout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+        // emojislayout.itemSize = CGSize(width: 70, height: 70)
         
-        emojisCollectioView = UICollectionView(frame: emojisFrame, collectionViewLayout: emojislayout)
-        emojisCollectioView.backgroundColor = .clear
-        scrollView.addSubview(emojisCollectioView)
-        emojisDelegate = EmojisCollectionViewDelegate()
-        emojisDelegate.stickersViewControllerDelegate = stickersViewControllerDelegate
-        emojisCollectioView.delegate = emojisDelegate
-        emojisCollectioView.dataSource = emojisDelegate
+        // emojisCollectioView = UICollectionView(frame: emojisFrame, collectionViewLayout: emojislayout)
+        // emojisCollectioView.backgroundColor = .clear
+        // scrollView.addSubview(emojisCollectioView)
+        // emojisDelegate = EmojisCollectionViewDelegate()
+        // emojisDelegate.stickersViewControllerDelegate = stickersViewControllerDelegate
+        // emojisCollectioView.delegate = emojisDelegate
+        // emojisCollectioView.dataSource = emojisDelegate
         
-        emojisCollectioView.register(
-            UINib(nibName: "EmojiCollectionViewCell", bundle: Bundle(for: EmojiCollectionViewCell.self)),
-            forCellWithReuseIdentifier: "EmojiCollectionViewCell")
+        // emojisCollectioView.register(
+        //     UINib(nibName: "EmojiCollectionViewCell", bundle: Bundle(for: EmojiCollectionViewCell.self)),
+        //     forCellWithReuseIdentifier: "EmojiCollectionViewCell")
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -120,10 +120,10 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
                                      width: UIScreen.main.bounds.width,
                                      height: view.frame.height - 40)
         
-        emojisCollectioView.frame = CGRect(x: scrollView.frame.size.width,
-                                           y: 0,
-                                           width: UIScreen.main.bounds.width,
-                                           height: view.frame.height - 40)
+        // emojisCollectioView.frame = CGRect(x: scrollView.frame.size.width,
+        //                                    y: 0,
+        //                                    width: UIScreen.main.bounds.width,
+        //                                    height: view.frame.height - 40)
         
         scrollView.contentSize = CGSize(width: 2.0 * screenSize.width,
                                         height: scrollView.frame.size.height)
