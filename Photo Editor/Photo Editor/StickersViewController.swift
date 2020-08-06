@@ -34,7 +34,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         configureCollectionViews()
-        scrollView.contentSize = CGSize(width: 2.0 * screenSize.width,
+        scrollView.contentSize = CGSize(width: screenSize.width,
                                         height: scrollView.frame.size.height)
         
         scrollView.isPagingEnabled = false
@@ -56,8 +56,8 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        let width = (CGFloat) ((screenSize.width - 30) / 3.0)
-        layout.itemSize = CGSize(width: width, height: 100)
+        let width = (CGFloat) ((screenSize.width - 30) / 6.0)
+        layout.itemSize = CGSize(width: width, height: 60)
         
         collectioView = UICollectionView(frame: frame, collectionViewLayout: layout)
         collectioView.backgroundColor = .clear
