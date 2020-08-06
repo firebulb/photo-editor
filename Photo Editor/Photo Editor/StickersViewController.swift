@@ -37,9 +37,9 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         scrollView.contentSize = CGSize(width: 2.0 * screenSize.width,
                                         height: scrollView.frame.size.height)
         
-        scrollView.isPagingEnabled = true
+        scrollView.isPagingEnabled = false
         scrollView.delegate = self
-        pageControl.numberOfPages = 2
+        pageControl.numberOfPages = 1
         
         holdView.layer.cornerRadius = 3
         let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(StickersViewController.panGesture))
