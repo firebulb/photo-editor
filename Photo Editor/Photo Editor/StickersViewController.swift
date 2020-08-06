@@ -204,14 +204,14 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     
 }
 
-extension StickersViewController: UIScrollViewDelegate {
+// extension StickersViewController: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageWidth = scrollView.bounds.width
-        let pageFraction = scrollView.contentOffset.x / pageWidth
-        self.pageControl.currentPage = Int(round(pageFraction))
-    }
-}
+//     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//         let pageWidth = scrollView.bounds.width
+//         let pageFraction = scrollView.contentOffset.x / pageWidth
+//         self.pageControl.currentPage = Int(round(pageFraction))
+//     }
+// }
 
 // MARK: - UICollectionViewDataSource
 extension StickersViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
